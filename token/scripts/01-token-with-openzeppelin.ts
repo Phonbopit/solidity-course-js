@@ -15,6 +15,7 @@ async function main() {
   await ahoy.transfer(wallet1.address, 100);
   const balance = await ahoy.balanceOf(wallet1.address);
   console.log('balance', balance);
+  console.log('balandOf(owner)', await ahoy.balanceOf(deployer.address));
 }
 
 main().catch((error) => {
